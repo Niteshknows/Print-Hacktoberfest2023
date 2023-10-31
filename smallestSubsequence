@@ -1,0 +1,37 @@
+# Python3 program for the above approach
+
+# Function to find the lexicographically
+# smallest subsequence of length N-1
+def firstSubsequence(s):
+
+	allsubseq = []
+
+	k = []
+
+	# Generate all subsequence of
+	# length N-1
+	for i in range(len(s)):
+
+		# Store main value of string str
+		k = [i for i in s]
+
+		# Erasing element at position i
+		del k[i]
+		allsubseq.append("".join(k))
+
+	# Sort the vector
+	allsubseq = sorted(allsubseq)
+
+	# Print first element of vector
+	print(allsubseq[0])
+
+# Driver Code
+if __name__ == '__main__':
+	
+	# Given string S
+	S = "geeksforgeeks"
+
+	# Function Call
+	firstSubsequence(S)
+
+# This code is contributed by mohit kumar 29
